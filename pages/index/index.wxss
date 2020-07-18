@@ -1,0 +1,45 @@
+.index{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40rpx;
+}
+.index1{
+  width: 50rpx;
+  height: 50rpx;
+}
+.index5{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
+}
+.index2{
+  width: 120rpx;
+  height: 60rpx;
+  border-radius: 18rpx;
+  border: 1rpx solid #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index4{
+  margin-top: 100rpx;
+  margin-left: 40rpx;
+}
+.image{
+  width: 220rpx;
+  height: 350rpx;
+}
+.book{
+  flex-wrap: wrap;
+}
+.book1{
+  color: rgb(208, 204, 204);
+}
+.image1{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 170rpx;
+
+}

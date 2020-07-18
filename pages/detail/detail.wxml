@@ -1,0 +1,39 @@
+<view class="box">
+	<view class="top">
+		<view class="content {{activeIndex === index ? 'active': ''}}" wx:for="{{typeList}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" bindtap="content">
+			{{item.name}}
+		</view>
+	</view>
+	<scroll-view scroll-x class="scroll-view_H">
+		<view class="list">
+			<view class="data {{activeIndexs === index ? 'active': ''}}" wx:for="{{arr[0].mins}}" wx:key="index" bindtap="contents" data-index="{{index}}" data-item="{{item}}" >
+				{{item}}
+			</view>
+		</view>
+	</scroll-view>
+	<scroll-view scroll-x class="scroll-view_H">
+		<view class="list">
+			<view class="data {{activeIndexs === index ? 'active': ''}}" wx:for="{{ass[0].mins}}" wx:key="index" bindtap="contents" data-index="{{index}}"  data-item="{{item}}">
+				{{item}}
+			</view>
+		</view>
+	</scroll-view>
+</view>
+<view>
+	<view wx:for="{{book}}" wx:key="index">
+		<view class="m-l-10 m-t-10 d-f" bindtap="book" data-item="{{item}}">
+			<image src="{{item.title.cover}}" class="image"></image>
+			<view class="m-l-10">
+				<view class="detail1">{{item.title.title}}</view>
+				<view class="detail2">{{item.author.title}}</view>
+				<view class="detail3">{{item.title.shortIntro}}</view>
+				<view class="d-f">
+				<view wx:for="{{item.title.tag}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1">
+					<view class="detail4"><view  style="background:{{item.color}}" class="item">{{item1}}</view></view>
+				</view>
+</view>
+			</view>
+		</view>
+		<view class="detail"></view>
+	</view>
+</view>

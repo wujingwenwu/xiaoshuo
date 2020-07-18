@@ -1,0 +1,9 @@
+<view class="boy">男生</view>
+<view class="boys">
+<view wx:for="{{male}}" wx:key="index" data-index="{{index}}" data-item="{{item}}" data-type="male" bindtap="goto">
+<view class="boy1">
+<view >{{item.name}}</view>
+<view class="boy2">{{item.bookCount}}本</view>
+</view>
+</view>
+</view>

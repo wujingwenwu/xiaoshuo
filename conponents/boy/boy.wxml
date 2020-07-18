@@ -1,0 +1,11 @@
+<view class="boy2">
+	<view wx:for="{{females}}" wx:key="index">
+		<view wx:if="{{item.collapse===false}}">
+			<view class="boy" data-item="{{item}}" bindtap="boy">
+				<image src="{{item.cover}}" class="boy1"></image>
+				<view class="boy3">{{item.title}}</view>
+			</view>
+			<view class="boy4"></view>
+		</view>
+	</view>
+</view>

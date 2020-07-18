@@ -1,0 +1,67 @@
+<view class="article">
+	<image src="{{obj.cover}}" class="image"></image>
+</view>
+<view class="article1">
+	<view class="article2">{{obj.title}}</view>
+	<view class="article3">{{obj.author}}</view>
+</view>
+<view class="d-f article7">
+	<view class="article5" bindtap="read" data-item="{{item}}">开始阅读</view>
+	<view class="article6" bindtap="book" wx:if="{{flag === true}}">加入书架</view>
+		<view class="article6"  wx:if='{{flag === false}}'>已加入书架</view>
+</view>
+<view class="article4">
+	<view class="bind1">
+		<van-rate readonly value="{{obj.rating.score/2}}" bind:change="onChange" color="red" class="bind" />
+	</view>
+	<view class="d-f j-c-c bind2">更新至
+		<view class="lastChapter">{{obj.lastChapter}}</view>
+	</view>
+	<view class="title">
+		<view class="city d-f">
+			<view class="city1 {{num===0?'active':''}}" bindtap="citys">
+				<view>详情</view>
+				<view class="city2 {{num==0?'actives':''}}" bindtap="citys"></view>
+			</view>
+
+			<view class="city1 {{num===1?'active':''}}" bindtap="city">
+				<view>评论({{obj.postCount}})</view>
+				<view class="city2 {{num==1?'actives':''}}" bindtap="city"></view>
+			</view>
+		</view>
+		<view class="articles"></view>
+		<view wx:if="{{num===0}}">
+			<view class="articles1">{{obj.longIntro}}</view>
+		</view>
+		<view wx:else>
+    <view wx:for="{{asr}}" wx:key="index">
+    <view class="d-f asr">
+    <image src="{{item.author.avatar}}" class="img"></image>
+    <view class="asr1">
+    <view class="asr2">{{item.author.nickname}}</view>
+    <view class="asr3">{{item.content}}</view>
+    </view>
+    </view>
+    </view>
+    </view>
+		<view class="articles2">
+			<image src="../../images/tabber/mu.png" class="logo"></image>
+			<view>总目录({{obj.chaptersCount}}章)</view>
+		</view>
+		<view class="articles3">
+			<view>看过这本书的人还在看</view>
+			<view class="search d-f" bindtap="Change">
+				<image src="../../images/tabber/lode1.png" class="image1"></image>
+				<view>换一换</view>
+			</view>
+		</view>
+	<view class="d-f logo3">
+				<view wx:for="{{ass}}" wx:key="index">
+					<view class="logo2">
+						<image src="{{item.cover}}" class="logo1"></image>
+            <view>{{item.title}}</view>
+					</view>
+				</view>
+			</view>
+	</view>
+</view>

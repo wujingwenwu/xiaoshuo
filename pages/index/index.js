@@ -1,17 +1,53 @@
+import api from "../../http/api"
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    books:[],
+    flag:false
   },
 
+  bang(){
+    wx.navigateTo({
+      url:"../help/help"
+    })
+  },
+  // 显示删除
+  qingkong(){
+    if(this.data.flag===false){
+      this.setData({
+        flag:true
+      })
+    }else{
+      this.setData({
+        flag:false
+      })
+    };
+  },
+  // 删除
+  image: function (e) {
+    console.log(e)
+    let index =e.currentTarget.dataset.index
+    let book = this.data.books
+    console.log(book)
+    book.splice(index,1)
+    this.setData({
+      book:book
+    })
+    wx.setStorageSync('book', book)
+    let books = wx.getStorageSync('book')
+    this.setData({
+      books:books
+    })
+ },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+  
   },
 
   /**
@@ -25,7 +61,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    let book =wx.getStorageSync('book')
+    this.setData({
+      books:book
+    })
+    console.log(this.data.books)
+   
   },
 
   /**

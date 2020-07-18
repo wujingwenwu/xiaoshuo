@@ -1,14 +1,42 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/home/home"
-    
+    "pages/bookcity/bookcity",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/article/article",
+    "pages/ranking/ranking",
+    "pages/read/read"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cc1a38",
+    "navigationBarTitleText": "小爱小说",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#f47",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabber/pc.png",
+        "selectedIconPath": "images/tabber/pc-active.png"
+      },
+      {
+        "text": "书城",
+        "pagePath": "pages/bookcity/bookcity",
+        "iconPath": "images/tabber/home.png",
+        "selectedIconPath": "images/tabber/home-active.png"
+      },
+      {
+        "text": "搜索",
+        "pagePath": "pages/search/search",
+        "iconPath": "images/tabber/sh.png",
+        "selectedIconPath": "images/tabber/sh-active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

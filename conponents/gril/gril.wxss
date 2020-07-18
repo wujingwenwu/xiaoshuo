@@ -1,0 +1,19 @@
+.boy{
+  display:flex;
+  margin-top: 20rpx;
+}
+.boy1{
+  width: 60rpx;
+  height: 60rpx;
+}
+.boy2{
+  margin-top: 40rpx;
+}
+.boy3{
+  margin-left: 20rpx;
+}
+.boy4{
+  width: 100%;
+  border: 1rpx solid rgb(214, 212, 212);
+  margin-top: 20rpx;
+}

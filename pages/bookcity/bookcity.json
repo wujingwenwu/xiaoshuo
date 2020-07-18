@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+   "bookcity":"../../conponents/bookcity/bookcity",
+   "female":"../../conponents/female/female",
+   "publish":"../../conponents/publish/publish",
+   "boy":"../../conponents/boy/boy",
+   "gril":"../../conponents/gril/gril"
+  }
+}

@@ -1,1 +1,25 @@
-123
+<view class="index">
+	<image src="../../images/tabber/Tick.png" class="index1" bindtap="qingkong"></image>
+	<view class="d-f index3">
+		<view class="index2">
+			<view bindtap="bang">帮助</view>
+		</view>
+		<image src="../../images/tabber/load.png" class="index5 m-l-40"></image>
+	</view>
+</view>
+<view class="index4" wx:if="{{books.length==''}}">主人还没有收藏书籍额，请去书城收藏书籍吧！</view>
+<view wx:else>
+	<view class="d-f book">
+		<view wx:for="{{books}}" wx:key="index">
+			<view class="m-l-10 p-r">
+				<view wx:if="{{flag===false}}"></view>
+				<view wx:else>
+					<image src="../../images/tabber/kong.png" class="image1" bindtap="image" data-index="{{index}}"></image>
+				</view>
+				<image src="{{item.cover}}" class="image"></image>
+				<view>{{item.title}}</view>
+				<view class="book1">读到第一章</view>
+			</view>
+		</view>
+	</view>
+</view>

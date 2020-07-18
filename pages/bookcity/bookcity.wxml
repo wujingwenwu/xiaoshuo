@@ -1,0 +1,23 @@
+<view class="city d-f">
+	<view class="city1 {{num===0?'active':''}}" bindtap="citys">
+		<view>书城</view>
+		<view class="city2 {{num==0?'actives':''}}" bindtap="citys"></view>
+	</view>
+
+	<view class="city1 {{num===1?'active':''}}" bindtap="city">
+		<view>排行</view>
+		<view class="city2 {{num==1?'actives':''}}" bindtap="city"></view>
+	</view>
+</view>
+
+<view wx:if="{{num===0}}">
+	<bookcity male="{{male}}"></bookcity>
+	<female female="{{female}}"></female>
+	<publish press="{{press}}"></publish>
+</view>
+<view wx:else>
+	<view class="boy">男生</view>
+	<boy females="{{females}}"></boy>
+	<view class="gril">女生</view>
+	<gril males="{{males}}"></gril>
+</view>

@@ -1,0 +1,31 @@
+.city{
+  background: rgb(225, 219, 219);
+  height: 80rpx;
+  justify-content: space-around;
+  align-items: center;
+}
+.active{
+  color: red;
+ 
+}
+.city1{
+  margin-top: 18rpx;
+}
+.city2{
+ 
+  margin-top: 20rpx;
+}
+.actives{
+  background: red;
+  width: 80rpx;
+  height: 6rpx;
+  
+}
+.boy{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.gril{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}

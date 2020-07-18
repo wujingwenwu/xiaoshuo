@@ -1,0 +1,50 @@
+<input type="text" placeholder="输入作者名或书名" class="input" confirm-type="search" value="{{value}}" bindinput="onInput" bindconfirm="input" ><image src="../../images/tabber/kong.png" class="kong" bindtap="image" wx:if="{{value !==''}}"></image></input>
+<view wx:if="{{value===''}}">
+	<view class="d-f j-c-s-b m-t-20">
+
+		<view class="search1">大家都在搜</view>
+		<view class="search d-f" bindtap="Change">
+			<image src="../../images/tabber/lode1.png" class="image1"></image>
+			<view>换一批</view>
+		</view>
+	</view>
+	<view class="d-f seach3">
+		<view wx:for="{{newHotWords}}" wx:key="index">
+			<view class="seach4" style="background:{{item.color}}" data-item="{{item}}" bindtap="bindtap">
+				<view class="seach2">{{item.word.word}}</view>
+			</view>
+
+		</view>
+	</view>
+	<view class="d-f j-c-s-b m-t-20">
+		<view class="m-l-10">搜索历史</view>
+		<view class="d-f seach6">
+			<image src="../../images/tabber/qing.png" class="image1"></image>
+			<view class="seach7" bindtap="qing">清空</view>
+		</view>
+	</view>
+	<view wx:if="{{flag===true}}">
+		<view class="d-f">
+			<view wx:for="{{ass}}" wx:key="index">
+				<view class="seach4" style="background:{{item.color}}" data-item="{{item}}" bindtap="title">
+					<view class="seach2" >{{item.title}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view wx:else></view>
+</view>
+<view wx:else>
+	<view wx:for="{{arr}}" wx:key="index">
+		<view class="d-f searchx7"  data-item="{{item}}" bindtap="tap">
+			<image src="{{item.cover}}" class="searchx"></image>
+			<view class="searchx2">
+				<view class="searchx1">{{item.title}}</view>
+				<view class="searchx3">{{item.author}}</view>
+				<view class="searchx4">{{item.shortIntro}}</view>
+				<view class="searchx5">最近收藏:{{item.latelyFollower}}</view>
+			</view>
+		</view>
+		<view class="searchx6"></view>
+	</view>
+</view>
