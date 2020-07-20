@@ -187,7 +187,7 @@ Change(){
     setTimeout(() => {
       wx.hideLoading()
       
-    }, 1000)
+    }, 500)
   },
 
   /**

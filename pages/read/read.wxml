@@ -1,4 +1,21 @@
-<import src="../../lib/wxParse/wxParse.wxml"/> 
-<view>
-<template is="wxParse" data="{{wxParseData:body.nodes}}" />
+<import src="../../lib/wxParse/wxParse.wxml" />
+<view class="page" style="background-color:{{pageBackgroundColor}}">
+	<view style="font-size:{{fontSize}}pt" class="wxParse" bindtap="page">
+		<template is="wxParse" data="{{wxParseData:body.nodes}}" style="font-size:{{fontSize}}pt" />
+
+	</view>
+
+	<view wx:if="{{flag==1}}" class="size">
+	
+			<view class="d-f size">
+				<view>目录</view>
+				<view bindtap="shrinkFontSize" class="sizes">A-</view>
+				<view bindtap="magnifyFontSize" class="sizes">A+</view>
+				<view class="back" bindtap="changeColor"></view>
+				<view class="back1" bindtap="changeColors"></view>
+				<view class="back2" bindtap="changeColorsr"></view>
+			</view>
+		
+
+	</view>
 </view>

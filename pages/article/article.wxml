@@ -1,5 +1,5 @@
 <view class="article">
-	<image src="{{obj.cover}}" class="image"></image>
+	<image src="{{obj.cover}}" class="image"  bindtap="save" wx:if="{{number==0}}"></image>
 </view>
 <view class="article1">
 	<view class="article2">{{obj.title}}</view>
@@ -64,4 +64,11 @@
 				</view>
 			</view>
 	</view>
+</view>
+<view wx:if="{{number==1}}" class="save1">
+ <image src="{{obj.cover}}"  class="save" bindlongtap="down" ></image>
+ <view wx:if="{{flags==true}}">
+   <view class="down" bindtap="saveImage" data-url="{{obj.cover}}" >保存</view>
+	 <view class="set" bindtap="set">取消</view>
+ </view>
 </view>

@@ -75,12 +75,20 @@ Page({
    
     let index = e.currentTarget.dataset.index
     let item = e.currentTarget.dataset.item
-    this.setData({
-      activeIndexs: index,
-      items:item
-    })
+    if (item === '全部') {
+      this.setData({
+        items: '',
+        activeIndexs: index,
+      })
+    } else {
+      this.setData({
+        activeIndexs: index,
+        items:item
+      })
+    }
     this.get()
   },
+ 
   get() {
     api.genders({
       gender: this.data.sex,
@@ -192,7 +200,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.showLoading({
+      title: '加载中...'
+    })
+    setTimeout(() => {
+      wx.hideLoading()
+      
+    }, 500)
   },
 
   /**
@@ -213,14 +227,24 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+   
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.setData({
+      start:this.data.start + 20
+     })
+     wx.showLoading({
+      title: '加载中...'
+    })
+    setTimeout(() => {
+      wx.hideLoading()
+      
+    }, 500)
+     this.get()
   },
 
   /**

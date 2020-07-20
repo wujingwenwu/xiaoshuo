@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-toast": "../../lib/vant/toast/index"
+  }
 }

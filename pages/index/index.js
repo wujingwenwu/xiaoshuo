@@ -41,7 +41,7 @@ Page({
     let books = wx.getStorageSync('book')
     this.setData({
       books:books
-    })
+    });
  },
   /**
    * 生命周期函数--监听页面加载
@@ -66,7 +66,13 @@ Page({
       books:book
     })
     console.log(this.data.books)
-   
+    wx.showLoading({
+      title: '加载中...'
+    })
+    setTimeout(() => {
+      wx.hideLoading()
+      
+    }, 500)
   },
 
   /**
